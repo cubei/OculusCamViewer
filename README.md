@@ -7,13 +7,13 @@ For the HMD and the head-tracking-system a Oculus Rift Dev Kit 1 was used.
 ---
 
 ## **Additional credit goes to:** ##
-* Hendrik Wiese
+* Hendrik Wiese (https://github.com/SeveQ)
 * Takashi Ogura (https://github.com/OTL/oculus)
 
 ---
 
 ## **Licence:** ##
-BSD
+[BSD](http://opensource.org/licenses/BSD-3-Clause), see [license file](/LICENSE.txt)
 
 ---
 
