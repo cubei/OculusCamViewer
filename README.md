@@ -1,6 +1,10 @@
+just placeholder atm
+
+release will follow
+
 # **Virtual pan-tilt-roll ROS-node** #
 
-This program was used for a telepresencerobot with a stereoscopic mechanical pan-tilt-roll camera system to reduce latency in movement.
+This program was used for a telepresence robot with a stereoscopic mechanical pan-tilt-roll camera system to reduce latency in movement.
 
 For the HMD and the head-tracking-system a Oculus Rift Dev Kit 1 was used.
 
