@@ -45,7 +45,6 @@ int main(int argc, char **argv){
 }
 
 void init(){
-	//cv::Mat mapImage = cv::imread("/home/lars/oculus_ros_git/src/dummy_map_publisher/src/map.png", CV_LOAD_IMAGE_GRAYSCALE);
 	cv::Mat mapImage = cv::imread("./src/dummy_map_publisher/src/map.png", CV_LOAD_IMAGE_GRAYSCALE);
 	std::copy (&(mapImage.data[0]), &(mapImage.data[0]) + (mapImage.cols * mapImage.rows), map);
 }
