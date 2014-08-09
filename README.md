@@ -33,7 +33,6 @@ For the HMD and the head-tracking-system a Oculus Rift Dev Kit 1 was used.
 **Problems with Aria.h and ROSARIA**
 
 ```
-#!bash
 sudo apt-get install libudev-dev
 cd ws
 source devel/setup.bash
@@ -45,15 +44,17 @@ catkin_make
 
 
 **Problems with graphics drivers on opencv compile**
-OpenCV without gpu => CMAKE ARG = "-D BUILD_opencv_gpu=OFF"
+
+OpenCV without gpu => CMAKE ARG:
+```
+-D BUILD_opencv_gpu=OFF
+```
 
 **Laserscanner:**
 ```
-#!bash
 sudo apt-get install ros-hydro-urg-node
 ```
 **Controller:**
 ```
-#!bash
 sudo apt-get install ros-hydro-joy
 ```
