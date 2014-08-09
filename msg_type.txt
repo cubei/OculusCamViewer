@@ -1,0 +1,54 @@
+oculus_cam_viewer:
+
+	published:
+		"/mapConfig" (map2image::mapConfig): information for the map publisher (size and stuff)
+	
+	subscribed:
+		"/camera/left/image_rect_color" (sensor_msgs::ImageConstPtr): left_image
+		"/camera/right/image_rect_color" (sensor_msgs::ImageConstPtr): right_image
+		"/oculus/hmdinfo" (oculus_msgs::HMDInfoPtr): HMD info (resolution, lens position and stuff)
+		"/oculus/orientation_stamped" (geometry_msgs::PoseStamped): orientation of the HMD (head tracking)
+		"/headunit/orientation_stamped" (geometry_msgs::PoseStamped): orientation of the camera (for virtual pan-tilt-roll)
+		"/rosaria/pose" (nav_msgs::Odometry): odometry data of the robot
+		"/mapimage" (sensor_msgs::ImageConstPtr): image of the map
+	
+	parameters:
+		"showMap" (bool): show the map (default: true)
+		"useVirtualPanTilt" (bool): use virtual pan-tilt-roll (default: true)
+		"measurement" (bool): console outputs of measurements (default: false)
+		"useRobotOrientation" (bool): uses the robot orientation additional to the HMD orientation for virtual panning (default: false)
+		"rotateThreshold" (double): minimum degree value for rotation (default: 3.0)
+
+-----------
+	
+map2image:
+	
+	published:
+		"/mapimage" (sensor_msgs::ImageConstPtr): image of the map
+
+
+	subscribed:
+		"/map" (nav_msgs::OccupancyGrid::ConstPtr): map (SLAM or dummy)
+		"/rosaria/pose" (nav_msgs::Odometry): odometry data of the robot
+		"/mapConfig" (map2image::mapConfig): map information about size and stuff
+
+	parameters:
+		"drawArrow" (bool): draws a arrow in the center of the map that points upwards (default: false)
+		"drawCircle" (bool): draws a point in the center of the map (default: false)
+		"drawCone" (bool): draws a cone that begins in the center and opens upwards to show the field of view (default: false)
+		"biggerImageForRotation" (bool): publish a bigger map than the mapConfig says, so in can be rotated without data loss (default: false)
+		"useRotation" (bool): rotate the map according to the robot odometry data (default: false)
+		"mapRange" (double): visible area (width and height) of the map in meters (default: 10.0)
+
+-----------
+		
+dummyMapPublisher:
+	
+	published:
+		"/map" (nav_msgs::OccupancyGrid::ConstPtr): map created from the image file in the folder
+
+	subscribed:
+		-
+
+	parameters:
+		-
