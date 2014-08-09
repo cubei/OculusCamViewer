@@ -1,7 +1,3 @@
-just placeholder atm
-
-release will follow
-
 # **Virtual pan-tilt-roll ROS-node** #
 
 This program was used for a telepresence robot with a stereoscopic mechanical pan-tilt-roll camera system to reduce latency in movement.
@@ -22,7 +18,9 @@ For the HMD and the head-tracking-system a Oculus Rift Dev Kit 1 was used.
 ---
 
 ### **Instructions:** ###
-..
+* You need ROS and OpenCV
+* Add the content of the src folder to your catkin workspace src folder and compile.
+* See [msg types](/msg_type.txt) for the msg specifications.
 
 ---
 
