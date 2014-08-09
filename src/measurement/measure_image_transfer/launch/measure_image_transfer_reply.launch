@@ -1,0 +1,5 @@
+<launch>
+	<node name="measure_reply_node" pkg="measure_image_transfer" type="reply_image_node">
+		<param name="image_transport" value="compressed"/>
+	</node>
+</launch>

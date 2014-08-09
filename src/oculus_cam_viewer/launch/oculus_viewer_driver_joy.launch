@@ -1,0 +1,21 @@
+<launch>
+	<node pkg="oculus_driver" type="oculus_node" required="true" output="screen" name="rift">
+	</node>
+
+	<node pkg="oculus_cam_viewer" type="oculus_cam_viewer_node" name="oculus_cam_viewer" output="screen">
+		<param name="image_transport" value="compressed"/>
+		<param name="useVirtualPanTilt" value="true"/>
+		<param name="measurement" value="false"/>
+		<param name="useRobotOrientation" value="false"/>
+		<param name="rotateThreshold" value="3"/>
+	</node>
+
+	<node pkg="dummy_map_publisher" type="dummyMapPublisher_node" required="true" output="screen" name="dummy_map">
+	</node>
+
+	<node pkg="map2image" type="map2image_node" required="true" output="screen" name="map_image">
+	</node>
+
+	<!-- <node pkg="rqt_ops" type="me_control" name="me_control" respawn="true" args="-b pyside" /> -->
+	<node pkg="joy" type="joy_node" name="joy" />
+</launch>

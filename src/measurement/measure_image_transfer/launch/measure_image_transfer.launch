@@ -1,0 +1,19 @@
+<launch>
+	<node name="left" pkg="usb_cam" type="usb_cam_node" ns="/camera">
+		<param name="video_device" value="/dev/stereocam/left" />
+		<param name="camera_info_url" value="package://base/cam_calibration_left.yaml" />
+		<!-- remap from="/cam_left/image_raw" to="/camera/left/image_raw" / -->
+	</node>
+	<node name="right" pkg="usb_cam" type="usb_cam_node" ns="/camera">
+		<param name="video_device" value="/dev/stereocam/right" />
+		<param name="camera_info_url" value="package://base/cam_calibration_right.yaml" />
+		<!-- remap from="/cam_right/image_raw" to="/camera/right/image_raw" / -->
+	</node>
+
+	<node name="iproc_left" pkg="image_proc" type="image_proc" ns="/camera/left" />
+	<node name="iproc_right" pkg="image_proc" type="image_proc" ns="/camera/right" />
+
+	<node name="measure_node" pkg="measure_image_transfer" type="measure_image_transfer_node" output="screen">
+		<param name="image_transport" value="compressed"/>
+	</node>
+</launch>

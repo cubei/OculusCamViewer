@@ -1,0 +1,5 @@
+<launch>
+	<node pkg="measure_image_proc_delay" type="measure_image_proc_delay_node" required="true" output="screen" name="measure_image_proc_delay">
+		<param name="image_transport" value="compressed"/>
+	</node>
+</launch>
