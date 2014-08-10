@@ -1,3 +1,6 @@
 [submodule "src/oculus_stuff"]
 	path = src/oculus_stuff
 	url = https://github.com/cubei/oculus.git
+[submodule "src/robotcamera"]
+	path = src/robotcamera
+	url = https://github.com/SeveQ/StereovisionTPR_Control.git
