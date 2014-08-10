@@ -1,0 +1,3 @@
+[submodule "src/oculus_stuff"]
+	path = src/oculus_stuff
+	url = https://github.com/cubei/oculus.git
