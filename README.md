@@ -22,6 +22,13 @@ For the HMD and the head-tracking-system a Oculus Rift Dev Kit 1 was used.
 * Add the content of the src folder to your catkin workspace src folder and compile.
 * See [msg types](/msg_type.txt) for the msg specifications.
 
+To get the full repo with submodules:
+```
+git clone https://github.com/cubei/OculusCamViewer.git
+cd OculusCamViewer
+git submodule init
+git submodule update
+```
 ---
 
 ### **Images:** ###
