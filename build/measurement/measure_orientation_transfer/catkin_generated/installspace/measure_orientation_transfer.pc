@@ -1,0 +1,8 @@
+prefix=/home/lars/OculusCamViewer_new/install
+
+Name: measure_orientation_transfer
+Description: Description of measure_orientation_transfer
+Version: 0.1.0
+Cflags: 
+Libs: -L/home/lars/OculusCamViewer_new/install/lib 
+Requires: roscpp message_runtime

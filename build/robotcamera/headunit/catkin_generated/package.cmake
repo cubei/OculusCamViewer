@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "headunit")
+set(headunit_MAINTAINER "tpr <tpr@todo.todo>")
+set(headunit_DEPRECATED "")
+set(headunit_VERSION "0.0.0")
+set(headunit_BUILD_DEPENDS "geometry_msgs" "oculus_msgs" "roscpp" "rospy" "std_msgs")
+set(headunit_RUN_DEPENDS "geometry_msgs" "oculus_msgs" "roscpp" "rospy" "std_msgs")
+set(headunit_BUILDTOOL_DEPENDS "catkin")

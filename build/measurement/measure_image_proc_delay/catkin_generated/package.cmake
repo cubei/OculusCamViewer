@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "measure_image_proc_delay")
+set(measure_image_proc_delay_MAINTAINER "Lars Harmsen <lars.harmsen@outlook.com>")
+set(measure_image_proc_delay_DEPRECATED "")
+set(measure_image_proc_delay_VERSION "0.1.0")
+set(measure_image_proc_delay_BUILD_DEPENDS "roscpp" "image_transport")
+set(measure_image_proc_delay_RUN_DEPENDS "message_runtime" "roscpp" "image_transport")
+set(measure_image_proc_delay_BUILDTOOL_DEPENDS "catkin")

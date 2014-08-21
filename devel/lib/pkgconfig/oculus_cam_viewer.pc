@@ -1,0 +1,8 @@
+prefix=/home/lars/OculusCamViewer_new/devel
+
+Name: oculus_cam_viewer
+Description: Description of oculus_cam_viewer
+Version: 0.1.0
+Cflags: 
+Libs: -L/home/lars/OculusCamViewer_new/devel/lib 
+Requires: roscpp oculus_msgs tf

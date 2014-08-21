@@ -1,0 +1,6 @@
+set(rqt_ops_SETUP_PY_VERSION "0.0.0")
+set(rqt_ops_SETUP_PY_SCRIPTS "scripts/me_control")
+set(rqt_ops_SETUP_PY_PACKAGES "rqt_ops")
+set(rqt_ops_SETUP_PY_PACKAGE_DIRS "src/rqt_ops")
+set(rqt_ops_SETUP_PY_MODULES "")
+set(rqt_ops_SETUP_PY_MODULE_DIRS "")

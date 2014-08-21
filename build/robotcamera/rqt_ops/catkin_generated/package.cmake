@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "rqt_ops")
+set(rqt_ops_MAINTAINER "tpr <tpr@todo.todo>")
+set(rqt_ops_DEPRECATED "")
+set(rqt_ops_VERSION "0.0.0")
+set(rqt_ops_BUILD_DEPENDS "rospy" "rqt_gui" "rqt_gui_py")
+set(rqt_ops_RUN_DEPENDS "rospy" "rqt_gui" "rqt_gui_py")
+set(rqt_ops_BUILDTOOL_DEPENDS "catkin")

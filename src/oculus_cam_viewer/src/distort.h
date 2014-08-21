@@ -19,5 +19,11 @@ cv::Mat barrel_dist(cv::Mat* img, float Cx = EYE_POSITION_X_DEFAULT, float Cy = 
 					float k0 = DISTORT_K0_DEFAULT, float k1 = DISTORT_K1_DEFAULT, float k2 = DISTORT_K2_DEFAULT,
 					float scale = 0.8f);
 
+cv::Mat barrel_dist(cv::Mat* img, cv::Mat* mapx, cv::Mat* mapy);
+
+void create_maps(cv::Mat* mapx, cv::Mat* mapy, float Cx = EYE_POSITION_X_DEFAULT, float Cy = EYE_POSITION_Y_DEFAULT,
+					float k0 = DISTORT_K0_DEFAULT, float k1 = DISTORT_K1_DEFAULT, float k2 = DISTORT_K2_DEFAULT,
+					float scale = 0.8f);
+
 #endif  // __OCULUS_VIEWER_DISTORT_H__
 

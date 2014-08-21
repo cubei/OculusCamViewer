@@ -1,0 +1,8 @@
+prefix=/home/lars/OculusCamViewer_new/install
+
+Name: map2image
+Description: Description of map2image
+Version: 0.1.0
+Cflags: -I/home/lars/OculusCamViewer_new/install/include
+Libs: -L/home/lars/OculusCamViewer_new/install/lib 
+Requires: roscpp tf message_runtime

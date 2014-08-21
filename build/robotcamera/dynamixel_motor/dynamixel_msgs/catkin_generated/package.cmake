@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "dynamixel_msgs")
+set(dynamixel_msgs_MAINTAINER "Antons Rebguns <arebgun@gmail.com>")
+set(dynamixel_msgs_DEPRECATED "")
+set(dynamixel_msgs_VERSION "0.4.0")
+set(dynamixel_msgs_BUILD_DEPENDS "message_generation" "std_msgs")
+set(dynamixel_msgs_RUN_DEPENDS "message_runtime" "std_msgs")
+set(dynamixel_msgs_BUILDTOOL_DEPENDS "catkin")

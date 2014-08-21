@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "dynamixel_motor")
+set(dynamixel_motor_MAINTAINER "Antons Rebguns <arebgun@gmail.com>")
+set(dynamixel_motor_DEPRECATED "")
+set(dynamixel_motor_VERSION "0.4.0")
+set(dynamixel_motor_BUILD_DEPENDS )
+set(dynamixel_motor_RUN_DEPENDS "dynamixel_tutorials" "dynamixel_msgs" "dynamixel_controllers" "dynamixel_driver")
+set(dynamixel_motor_BUILDTOOL_DEPENDS "catkin")

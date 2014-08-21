@@ -1,0 +1,8 @@
+prefix=/home/lars/OculusCamViewer_new/devel
+
+Name: base
+Description: Description of base
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/lars/OculusCamViewer_new/devel/lib 
+Requires: 

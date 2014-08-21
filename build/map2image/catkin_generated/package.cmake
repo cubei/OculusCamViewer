@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "map2image")
+set(map2image_MAINTAINER "Lars Harmsen <lars.harmsen@outlook.com>")
+set(map2image_DEPRECATED "")
+set(map2image_VERSION "0.1.0")
+set(map2image_BUILD_DEPENDS "message_generation" "roscpp" "oculus_msgs" "image_transport" "cv_bridge" "OpenCV" "tf")
+set(map2image_RUN_DEPENDS "message_runtime" "roscpp" "image_transport" "cv_bridge" "oculus_msgs" "tf")
+set(map2image_BUILDTOOL_DEPENDS "catkin")

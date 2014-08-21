@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "dynamixel_tutorials")
+set(dynamixel_tutorials_MAINTAINER "Antons Rebguns <arebgun@gmail.com>")
+set(dynamixel_tutorials_DEPRECATED "")
+set(dynamixel_tutorials_VERSION "0.4.0")
+set(dynamixel_tutorials_BUILD_DEPENDS )
+set(dynamixel_tutorials_RUN_DEPENDS "dynamixel_controllers")
+set(dynamixel_tutorials_BUILDTOOL_DEPENDS "catkin")

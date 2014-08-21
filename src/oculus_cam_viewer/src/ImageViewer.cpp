@@ -53,6 +53,7 @@ void msgQuat2Degree(const geometry_msgs::Quaternion& msg, double* yaw, double* p
 // ------------------------ CLASS FUNCTIONS ------------------------
 
 ImageViewer::ImageViewer(void): imageTransport(node) {
+	// should be updated with hmd_info
 	displaySize = cv::Size(WINDOW_WIDTH_DEFAULT, WINDOW_HEIGHT_DEFAULT);
 	
 	setHMDOrientation(0.0f, 0.0f, 0.0f);
@@ -85,6 +86,13 @@ void ImageViewer::init() {
 
 	mapImageSub = node.subscribe(TOPIC_MAP_IMAGE, 1, &ImageViewer::mapImageCallback, this);
 	mapConfigPub = node.advertise<map2image::mapConfig>(TOPIC_MAP_CONFIG, 1);
+
+	mapxRight = cv::Mat(displaySize.height, displaySize.width/2, CV_32FC1);
+	mapyRight = cv::Mat(displaySize.height, displaySize.width/2, CV_32FC1);
+	create_maps(&mapxRight, &mapyRight, displaySize.width/2 * eyeOffsetXRight, displaySize.height/2, distortionK0, distortionK1, distortionK2, 1/eyeScale);
+	mapxLeft = cv::Mat(displaySize.height, displaySize.width/2, CV_32FC1);
+	mapyLeft = cv::Mat(displaySize.height, displaySize.width/2, CV_32FC1);
+	create_maps(&mapxLeft, &mapyLeft, displaySize.width/2 * eyeOffsetXLeft, displaySize.height/2, distortionK0, distortionK1, distortionK2, 1/eyeScale);
 
 	// -------- ARGS --------
 	ros::NodeHandle local_node("~");
@@ -157,6 +165,7 @@ void ImageViewer::HMDInfoCallback(const oculus_msgs::HMDInfoPtr& info) {
 		setEyeLensConfiguration(info->lens_separation_distance, info->horizontal_screen_size, info->eye_to_screen_distance);
 		setDistortionCoefficients(info->distortion_K[0], info->distortion_K[1], info->distortion_K[2]);
 	}
+	// TODO: Update display size/resolution and recreate masks and maps
 }
 
 void ImageViewer::mapImageCallback(const sensor_msgs::ImageConstPtr& msg) {
@@ -340,7 +349,7 @@ void ImageViewer::measureProcessingSteps(){
 	drawFPSText(&tmpImg, TEXT_POS_X_LEFT((displaySize.width >> 1)), TEXT_POS_Y(displaySize.height));
 	ros::Time timePostHUD = ros::Time::now();
 
-	tmpImg = barrel_dist(&tmpImg, tmpImg.cols * eyeOffsetXLeft, tmpImg.rows/2, distortionK0, distortionK1, distortionK2, 1/eyeScale);
+	tmpImg = barrel_dist(&tmpImg, &mapxRight, &mapyRight);
 	ros::Time timePostDistortion = ros::Time::now();
 
 	ROS_INFO("\ntotal:%ld\nscale:%ld\nrotate:%ld\nvirtual:%ld\nHUD:%ld\ndistortion:%ld\n",
@@ -371,7 +380,7 @@ void ImageViewer::processLeftImage(){
 
 	drawFPSText(&imageLeft, TEXT_POS_X_LEFT((displaySize.width >> 1)), TEXT_POS_Y(displaySize.height));
 	
-	imageLeft = barrel_dist(&imageLeft, imageLeft.cols * eyeOffsetXLeft, imageLeft.rows/2, distortionK0, distortionK1, distortionK2, 1/eyeScale);
+	imageLeft = barrel_dist(&imageLeft, &mapxLeft, &mapyLeft);
 
 	imageLeft.copyTo(leftSide);
 }
@@ -395,8 +404,8 @@ void ImageViewer::processRightImage(){
 	int posX = getXPosForRightEye(lensSeparationDistancePixel, eye2ScreenDistancePixel, displaySize.width, TEXT_POS_X_LEFT((displaySize.width >> 1)), 4.0f);
 	drawFPSText(&imageRight, posX, TEXT_POS_Y(displaySize.height));
 
-	imageRight = barrel_dist(&imageRight, imageRight.cols * eyeOffsetXRight, imageRight.rows/2, distortionK0, distortionK1, distortionK2, 1/eyeScale);
-
+	imageRight = barrel_dist(&imageRight, &mapxRight, &mapyRight);
+	
 	imageRight.copyTo(rightSide);
 }
 

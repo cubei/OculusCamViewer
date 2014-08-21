@@ -1,0 +1,8 @@
+prefix=/home/lars/OculusCamViewer_new/install
+
+Name: p3dx
+Description: Description of p3dx
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/lars/OculusCamViewer_new/install/lib 
+Requires: 

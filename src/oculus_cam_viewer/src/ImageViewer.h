@@ -236,6 +236,10 @@ private:
 	cv::Mat finalImage;
 	cv::Mat mapImage;
 	cv::Mat roundMask;
+	cv::Mat mapxRight;
+	cv::Mat mapyRight;
+	cv::Mat mapxLeft;
+	cv::Mat mapyLeft;
 
 	orientationStruct HMDOrientation;
 	orientationStruct cameraOrientation;
