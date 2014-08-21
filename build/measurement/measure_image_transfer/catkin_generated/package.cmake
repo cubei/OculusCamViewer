@@ -1,7 +1,0 @@
-set(_CATKIN_CURRENT_PACKAGE "measure_image_transfer")
-set(measure_image_transfer_MAINTAINER "Lars Harmsen <lars.harmsen@outlook.com>")
-set(measure_image_transfer_DEPRECATED "")
-set(measure_image_transfer_VERSION "0.1.0")
-set(measure_image_transfer_BUILD_DEPENDS "roscpp" "image_transport")
-set(measure_image_transfer_RUN_DEPENDS "message_runtime" "roscpp" "image_transport")
-set(measure_image_transfer_BUILDTOOL_DEPENDS "catkin")

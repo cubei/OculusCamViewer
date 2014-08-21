@@ -1,8 +1,0 @@
-prefix=/home/lars/OculusCamViewer_new/install
-
-Name: rqt_ops
-Description: Description of rqt_ops
-Version: 0.0.0
-Cflags: 
-Libs: -L/home/lars/OculusCamViewer_new/install/lib 
-Requires: 

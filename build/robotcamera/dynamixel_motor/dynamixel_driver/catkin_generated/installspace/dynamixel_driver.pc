@@ -1,8 +1,0 @@
-prefix=/home/lars/OculusCamViewer_new/install
-
-Name: dynamixel_driver
-Description: Description of dynamixel_driver
-Version: 0.4.0
-Cflags: 
-Libs: -L/home/lars/OculusCamViewer_new/install/lib 
-Requires: rospy diagnostic_msgs

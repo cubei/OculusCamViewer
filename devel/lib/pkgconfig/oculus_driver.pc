@@ -1,8 +1,0 @@
-prefix=/home/lars/OculusCamViewer_new/devel
-
-Name: oculus_driver
-Description: Description of oculus_driver
-Version: 0.0.0
-Cflags: -I/home/lars/OculusCamViewer_new/src/oculus_stuff/oculus_driver/include
-Libs: -L/home/lars/OculusCamViewer_new/devel/lib -loculus_driver
-Requires: roscpp geometry_msgs tf oculus_msgs

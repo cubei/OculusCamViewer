@@ -1,7 +1,0 @@
-set(_CATKIN_CURRENT_PACKAGE "oculus_driver")
-set(oculus_driver_MAINTAINER "Takashi Ogura <t.ogura@gmail.com>")
-set(oculus_driver_DEPRECATED "")
-set(oculus_driver_VERSION "0.0.0")
-set(oculus_driver_BUILD_DEPENDS "message_generation" "roscpp" "geometry_msgs" "tf" "image_transport" "cv_bridge" "oculus_msgs")
-set(oculus_driver_RUN_DEPENDS "roscpp" "geometry_msgs" "message_runtime" "tf" "image_transport" "cv_bridge" "oculus_msgs")
-set(oculus_driver_BUILDTOOL_DEPENDS "catkin")

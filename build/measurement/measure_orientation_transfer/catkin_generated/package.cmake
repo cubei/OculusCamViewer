@@ -1,7 +1,0 @@
-set(_CATKIN_CURRENT_PACKAGE "measure_orientation_transfer")
-set(measure_orientation_transfer_MAINTAINER "Lars Harmsen <lars.harmsen@outlook.com>")
-set(measure_orientation_transfer_DEPRECATED "")
-set(measure_orientation_transfer_VERSION "0.1.0")
-set(measure_orientation_transfer_BUILD_DEPENDS "roscpp")
-set(measure_orientation_transfer_RUN_DEPENDS "message_runtime" "roscpp")
-set(measure_orientation_transfer_BUILDTOOL_DEPENDS "catkin")

@@ -1,7 +1,0 @@
-set(_CATKIN_CURRENT_PACKAGE "p3dx")
-set(p3dx_MAINTAINER "tpr <tpr@todo.todo>")
-set(p3dx_DEPRECATED "")
-set(p3dx_VERSION "0.0.0")
-set(p3dx_BUILD_DEPENDS "geometry_msgs" "roscpp" "rospy" "std_msgs")
-set(p3dx_RUN_DEPENDS "geometry_msgs" "roscpp" "rospy" "std_msgs")
-set(p3dx_BUILDTOOL_DEPENDS "catkin")

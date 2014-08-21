@@ -1,8 +1,0 @@
-prefix=/home/lars/OculusCamViewer_new/install
-
-Name: measure_image_proc_delay
-Description: Description of measure_image_proc_delay
-Version: 0.1.0
-Cflags: 
-Libs: -L/home/lars/OculusCamViewer_new/install/lib 
-Requires: roscpp message_runtime

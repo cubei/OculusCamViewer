@@ -1,8 +1,0 @@
-prefix=/home/lars/OculusCamViewer_new/devel
-
-Name: dummy_map_publisher
-Description: Description of dummy_map_publisher
-Version: 0.1.0
-Cflags: 
-Libs: -L/home/lars/OculusCamViewer_new/devel/lib 
-Requires: roscpp tf message_runtime

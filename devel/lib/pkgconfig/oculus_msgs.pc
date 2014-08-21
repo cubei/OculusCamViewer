@@ -1,8 +1,0 @@
-prefix=/home/lars/OculusCamViewer_new/devel
-
-Name: oculus_msgs
-Description: Description of oculus_msgs
-Version: 0.0.0
-Cflags: -I/home/lars/OculusCamViewer_new/devel/include
-Libs: -L/home/lars/OculusCamViewer_new/devel/lib 
-Requires: message_runtime std_msgs
